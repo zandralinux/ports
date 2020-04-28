@@ -14,9 +14,12 @@ gcc:QV:
 		--enable-languages=c,c++ \
 		--host=$arch-linux-musl \
 		--target=$arch-linux-musl \
-		--with-gmp=$gmp_includedir/.. \
-		--with-mpc=$mpc_includedir/.. \
-		--with-mpfr=$mpfr_includedir/..
+		--with-gmp-include=$gmp_includedir \
+		--with-gmp-lib=$gmp_libdir \
+		--with-mpc-include=$mpc_includedir \
+		--with-mpc-lib=$mpc_libdir \
+		--with-mpfr-include=$mpfr_includedir \
+		--with-mpfr-lib=$mpfr_libdir
 	make -j$nprocs all-gcc
 
 install:QV:
