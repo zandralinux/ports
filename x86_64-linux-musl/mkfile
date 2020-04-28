@@ -1,0 +1,4 @@
+TARG = binutils gcc linux-headers musl
+
+<$mkbuild/mk.parent
+
