@@ -1,5 +1,5 @@
 TARG = openssh
-DEPS = zlib openssl
+DEPS = zlib libressl
 
 <$mkbuild/mk.common-noinst
 
@@ -19,7 +19,7 @@ openssh:QV:
 			--sysconfdir="$PREFIX"/etc/ssh \
 			--with-privsep-user=nobody \
 			--with-md5-passwords --with-mantype=man --mandir="$PREFIX"/share/man \
-			--disable-strip --disable-lastlog --disable-utmp --disable-utmpx --disable-btmp \
+			--disable-lastlog --disable-utmp --disable-utmpx --disable-btmp \
 			--disable-wtmp --disable-wtmpx --disable-pututline --disable-pututxline
 	mkdir netinet
 	touch netinet/in_systm.h
