@@ -12,5 +12,3 @@ libevent:QV:
 		--disable-libevent-regress \
 		--enable-static
 	make -j$nprocs
-	# copy some header files to include dir for depsinc
-	cp evdns.h event.h evhttp.h evrpc.h evutil.h include/

@@ -2,5 +2,5 @@
 
 <v.mk
 src = libevent-$v
-url = http://github.com/downloads/libevent/libevent/libevent-$v.tar.gz
+url = https://github.com/libevent/libevent/releases/download/release-$v/libevent-$v.tar.gz
 mkfile = ../libevent.mk
