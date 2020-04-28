@@ -1,20 +1,21 @@
 <../v.mk
 
-BIN = src/msmtp
-OBJ = `{ls src/*.c | sed 's/.$/o/'}
+TARG = msmtp
+DEPS = libressl zlib
 
 INSTALL_BIN = src/msmtp
 INSTALL_MAN1 = `{ ls doc/*.1 }
 
-LOCAL_CFLAGS = \
-	-I. -I../ -include `{pwd}/../config.h -I${libressl_includedir}
-LOCAL_LDFLAGS = -L. -L${libressl_libdir} -lssl -lcrypto -lz
 
-DEPS = libressl zlib
+<$mkbuild/mk.common-noinst
 
-<$mkbuild/mk.default
+msmtp:QV:
+	export CFLAGS="$CFLAGS $DEPS_CFLAGS"
+	export LDFLAGS="$LDFLAGS $DEPS_LDFLAGS"
+	./configure --with-tls=openssl \
+		--disable-nls --without-libidn \
+		--without-libsecret
+	make -j$nprocs
 
-$OBJ: config.h
-
-config.h:
-	cp ../config.h config.h
+install:QV:
+	make DESTDIR="$ROOT" install
