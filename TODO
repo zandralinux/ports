@@ -1,0 +1,26 @@
+# Ports TODO List
+
+## Packages to bump:
+
+ * gettext
+ * git
+ * make
+ * mg
+ * x stuff
+
+## Packages to add:
+ * clisp
+ * dash
+ * gnuchess
+ * gnugo
+ * go
+ * irssi
+ * linux-libre
+ * spell
+ * netcat
+ * surf
+
+## Misc:
+
+ * Maybe switch to svc from r-36 (http://r-36.net/scm/svc/log.html) from busybox svc.
+ * Comb through packages to find those that can be reasonably built without make.
