@@ -1,0 +1,6 @@
+<$mkbuild/mk.3rdparty
+
+<v.mk
+src = isync-$v
+url = https://downloads.sourceforge.net/sourceforge/isync/isync-$v.tar.gz
+mkfile = ../isync.mk
