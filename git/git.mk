@@ -13,7 +13,7 @@ git:QV:
 	CC="$CC -static" \
 		AR="$AR" \
 		prefix="$PREFIX/" gitexecdir="$PREFIX"/lib/git-core \
-		NO_TCLTK=1 NO_PYTHON=1 NO_EXPAT=1 NO_GETTEXT=1 \
+		NO_TCLTK=1 NO_PYTHON=1 NO_EXPAT=1 NO_GETTEXT=1 NO_REGEX=NeedsStartEnd \
 		CFLAGS="$CFLAGS" LDFLAGS="$LDFLAGS -static" \
 		DESTDIR="$ROOT" -j$nprocs V=1 all
 
