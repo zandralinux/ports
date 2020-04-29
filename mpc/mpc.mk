@@ -15,4 +15,4 @@ mpc:QV:
 		--with-mpfr-include=$mpfr_includedir \
 		--with-mpfr-lib=$mpfr_libdir
 	make -j$nprocs
-	make DESTDIR=`pwd`/lib
+	make DESTDIR=`pwd`/lib install
