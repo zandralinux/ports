@@ -5,7 +5,7 @@ INSTALL_MAN1 = doc/gawk.1
 
 <$mkbuild/mk.common
 
-gawk:QV:
+gawk:
 	CC="${CC} -static" ./configure \
 		--build="${TOOLCHAIN_TRIPLET}" \
 		--host="${HOST_TOOLCHAIN_TRIPLET}" \
