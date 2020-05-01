@@ -1,0 +1,6 @@
+<$mkbuild/mk.3rdparty
+
+<v.mk
+src = msmtp-$v
+url = https://marlam.de/msmtp/releases/msmtp-$v.tar.xz
+mkfile = ../msmtp.mk

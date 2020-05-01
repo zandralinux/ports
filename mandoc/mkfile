@@ -1,0 +1,6 @@
+<$mkbuild/mk.3rdparty
+
+<v.mk
+src = mandoc-$v
+url = https://mandoc.bsd.lv/snapshots/mandoc-$v.tar.gz
+mkfile = ../mandoc.mk

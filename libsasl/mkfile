@@ -1,0 +1,6 @@
+<$mkbuild/mk.3rdparty
+
+<v.mk
+src = cyrus-sasl-$v
+url = https://github.com/cyrusimap/cyrus-sasl/releases/download/cyrus-sasl-$v/cyrus-sasl-$v.tar.gz
+mkfile = ../libsasl.mk

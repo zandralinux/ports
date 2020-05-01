@@ -8,6 +8,7 @@ INSTALL_DIRS = \
 	/mnt \
 	/proc \
 	/root \
+	/run \
 	/share \
 	/src \
 	/sys \
