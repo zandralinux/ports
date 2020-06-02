@@ -5,7 +5,6 @@ DEPS = gmp
 
 mpfr:QV:
 	CC="$CC" ./configure \
-		--build="${TOOLCHAIN_TRIPLET}" \
 		--host="${HOST_TOOLCHAIN_TRIPLET}" \
 		--prefix="$PREFIX" \
 		--disable-shared \
