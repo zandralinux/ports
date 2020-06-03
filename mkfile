@@ -6,7 +6,6 @@ TARG = \
 	e2fsprogs \
 	extlinux \
 	file \
-	hbase \
 	linux \
 	mksh \
 	ns-tools \
