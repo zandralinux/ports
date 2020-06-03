@@ -10,10 +10,9 @@ gcc:QV:
 		--disable-shared \
 		--disable-multilib \
 		--disable-nls \
-		--disable-bootstrap \
 		--enable-languages=c,c++ \
-		--host=$arch-linux-musl \
-		--target=$arch-linux-musl \
+		--host=${HOST_TOOLCHAIN_TRIPLET} \
+		--target=${TOOLCHAIN_TRIPLET} \
 		--with-gmp-include=$gmp_includedir \
 		--with-gmp-lib=$gmp_libdir \
 		--with-mpc-include=$mpc_includedir \
