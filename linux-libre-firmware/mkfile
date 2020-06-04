@@ -1,0 +1,6 @@
+<$mkbuild/mk.3rdparty
+<v.mk
+
+src = linux-libre-firmware-$v
+url = http://jxself.org/firmware/linux-libre-firmware-$v.tar.lz
+mkfile = ../linux-libre-firmware.mk
