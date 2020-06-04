@@ -6,7 +6,7 @@ TARG = \
 	e2fsprogs \
 	extlinux \
 	file \
-	linux \
+	linux-libre \
 	mksh \
 	ns-tools \
 	pkgtools \
