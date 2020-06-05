@@ -1,0 +1,6 @@
+<$mkbuild/mk.3rdparty
+
+<v.mk
+src = rsync-$v
+url = https://download.samba.org/pub/rsync/src/rsync-$v.tar.gz
+mkfile = ../rsync.mk
