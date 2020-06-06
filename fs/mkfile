@@ -16,6 +16,7 @@ INSTALL_DIRS = \
 	/var \
 	/var/empty \
 	/var/log \
+	/var/pkg
 	/var/run \
 	/bin/svc.d/avail \
 	/bin/svc.d/default
