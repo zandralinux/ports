@@ -9,8 +9,8 @@ binutils:QV:
 		--disable-nls \
 		--disable-gold \
 		--disable-werror \
-		--build=x86_64-linux-musl \
-		--target=x86_64-linux-musl
+		--build=${TOOLCHAIN_TRIPLET} \
+		--target=${TOOLCHAIN_TRIPLET}
 	make -j$nprocs
 	cd binutils
 	rm bfdtest1 bfdtest2 ar addr2line cxxfilt elfedit nm-new \
