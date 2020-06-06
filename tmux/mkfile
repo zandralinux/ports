@@ -1,0 +1,6 @@
+<$mkbuild/mk.3rdparty
+
+<v.mk
+src = tmux-$v
+url = https://github.com/tmux/tmux/releases/download/$v/tmux-$v.tar.gz
+mkfile = ../tmux.mk
