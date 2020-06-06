@@ -37,6 +37,7 @@ curl:QV:
 		--enable-static \
 		--enable-ipv6
 	make -j$nprocs
+	rm src/curl
 	make LDFLAGS="-all-static $LDFLAGS"
 	# install in ./lib for use as a dependency.
 	make install LDFLAGS="-all-static $LDFLAGS" DESTDIR="`pwd`/lib"
