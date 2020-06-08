@@ -1,0 +1,6 @@
+<$mkbuild/mk.3rdparty
+
+<v.mk
+src = less-$v
+url = http://www.greenwoodsoftware.com/less/less-$v.tar.gz
+mkfile = ../less.mk
