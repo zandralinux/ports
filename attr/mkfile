@@ -1,0 +1,6 @@
+<$mkbuild/mk.3rdparty
+
+<v.mk
+src = attr-$v
+url = https://download.savannah.nongnu.org/releases/attr/attr-$v.tar.gz
+mkfile = ../attr.mk

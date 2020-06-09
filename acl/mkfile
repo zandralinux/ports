@@ -1,0 +1,6 @@
+<$mkbuild/mk.3rdparty
+
+<v.mk
+src = acl-$v
+url = https://download.savannah.nongnu.org/releases/acl/acl-$v.tar.gz
+mkfile = ../acl.mk
