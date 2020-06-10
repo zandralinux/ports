@@ -1,0 +1,8 @@
+<$mkbuild/mk.3rdparty
+
+<v.mk
+src = fakeroot-ng-$v
+url = http://deb.debian.org/debian/pool/main/f/fakeroot-ng/fakeroot-ng_$v.orig.tar.gz
+mkfile = ../fakeroot-ng.mk
+patches = \
+	../musl-fixes.patch

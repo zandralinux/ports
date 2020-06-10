@@ -1,0 +1,74 @@
+diff -aur fakeroot-ng-0.17/arch/linux/os.c fakeroot-ng-0.17-dirty/arch/linux/os.c
+--- fakeroot-ng-0.17/arch/linux/os.c	2009-06-23 17:25:42.000000000 +0000
++++ fakeroot-ng-0.17-dirty/arch/linux/os.c	2017-03-15 08:23:51.089736930 +0000
+@@ -22,7 +22,6 @@
+ #include <sys/types.h>
+ #include <sys/ptrace.h>
+ #include <sys/wait.h>
+-#include <linux/ptrace.h>
+ #include <signal.h>
+ #include <sched.h>
+ 
+diff -aur fakeroot-ng-0.17/file.cpp fakeroot-ng-0.17-dirty/file.cpp
+--- fakeroot-ng-0.17/file.cpp	2009-06-29 12:31:31.000000000 +0000
++++ fakeroot-ng-0.17-dirty/file.cpp	2017-03-15 08:24:00.662975748 +0000
+@@ -29,6 +29,7 @@
+ #include <limits.h>
+ 
+ #include <string.h>
++#include <unistd.h>
+ 
+ #include <sys/types.h>
+ #include <sys/ptrace.h>
+ #include <signal.h>
+diff -aur fakeroot-ng-0.17/parent.cpp fakeroot-ng-0.17-dirty/parent.cpp
+--- fakeroot-ng-0.17/parent.cpp	2009-06-29 12:23:03.000000000 +0000
++++ fakeroot-ng-0.17-dirty/parent.cpp	2017-03-15 08:24:08.772895627 +0000
+@@ -40,6 +40,7 @@
+ #include <string.h>
+ #include <limits.h>
++#include <unistd.h>
+ 
+ #include <sys/types.h>
+ #include <sys/ptrace.h>
+ #include <signal.h>
+@@ -201,9 +202,6 @@
+ #ifdef SYS_lstat64
+     DEF_SYS2(lstat64, stat);
+ #endif
+-#if defined(SYS_fstatat64) && HAVE_OPENAT
+-    DEF_SYS1(fstatat64);
+-#endif
+ 
+     DEF_SYS1(chown);
+ #if defined(SYS_chown32)
+diff -aur fakeroot-ng-0.17/ptrace.cpp fakeroot-ng-0.17-dirty/ptrace.cpp
+--- fakeroot-ng-0.17/ptrace.cpp	2009-05-30 14:29:22.000000000 +0000
++++ fakeroot-ng-0.17-dirty/ptrace.cpp	2017-03-15 08:24:16.379487106 +0000
+@@ -79,7 +79,7 @@
+ {
+     pid_t child=(pid_t)state->context_state[1];
+     pid_state *child_state=lookup_state( child );
+-    __ptrace_request req=(__ptrace_request)state->context_state[0];
++    int req=(int)state->context_state[0];
+     if( req==PTRACE_CONT ) {
+         child_state->trace_mode|=TRACE_CONT;
+         dlog("ptrace: %d PTRACE_CONT("PID_F")\n", pid, child );
+@@ -183,7 +183,7 @@
+ 
+     if( verify_permission( pid, state ) ) {
+         errno=0;
+-        long data=ptrace( (__ptrace_request)state->context_state[0], child, state->context_state[2], 0 );
++        long data=ptrace( (int)state->context_state[0], child, state->context_state[2], 0 );
+         if( data!=-1 || errno==0 ) {
+             dlog("handle_peek_data: %d is peeking data from "PID_F" at address %p\n", pid, child, (void*)state->context_state[2] );
+ 
+@@ -208,7 +208,7 @@
+     pid_t child=(pid_t)state->context_state[1];
+ 
+     if( verify_permission( pid, state ) &&
+-        ptrace( (__ptrace_request)state->context_state[0], child, state->context_state[2], state->context_state[3] )==0 )
++        ptrace( (int)state->context_state[0], child, state->context_state[2], state->context_state[3] )==0 )
+     {
+         dlog("handle_poke_data: %d is pokeing data in "PID_F" at address %p\n", pid, child, (void*)state->context_state[2] );
+         ptlib_set_retval( pid, 0 );
