@@ -16,7 +16,7 @@ echo
 /bin/mount -n -t proc -o nosuid,noexec,nodev proc /proc
 /bin/mount -n -t sysfs -o nosuid,noexec,nodev sysfs /sys
 
-/bin/mount -n -t tmpfs -o nosuid,mode=0755 dev /dev
+/bin/mount -n -t tmpfs -o nosuid,exec,mode=0755 dev /dev
 /bin/mkdir -p /dev/pts
 /bin/mount -n -t devpts -o gid=5,mode=0620 devpts /dev/pts
 
@@ -51,6 +51,7 @@ echo Remounting root as read-write
 
 echo Mounting filesystems
 /bin/mount -a
+/bin/mount -o remount,exec /tmp
 
 ln -sf /proc/mounts /etc/mtab
 
