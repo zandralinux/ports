@@ -1,7 +1,8 @@
 <$mkbuild/mk.3rdparty
 
-src = smdev
-git = git://git.2f30.org/smdev
+<v.mk
+src = smdev-v$v
+url = https://gitlab.com/phkr/smdev/-/archive/v$v/smdev-v$v.tar.gz
 mkfile = ../smdev.mk
 patches = \
 	../musl-build.patch
