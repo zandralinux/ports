@@ -2,5 +2,5 @@
 
 <v.mk
 src = sed-$v
-url = http://ftp.gnu.org/gnu/sed/sed-$v.tar.gz
+url = http://ftpmirror.gnu.org/gnu/sed/sed-$v.tar.gz
 mkfile = ../sed.mk

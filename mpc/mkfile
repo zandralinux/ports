@@ -2,5 +2,5 @@
 
 <v.mk
 src = mpc-$v
-url = ftp://ftp.gnu.org/gnu/mpc/mpc-$v.tar.gz
+url = http://ftpmirror.gnu.org/gnu/mpc/mpc-$v.tar.gz
 mkfile = ../mpc.mk

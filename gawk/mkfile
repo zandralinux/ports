@@ -2,5 +2,5 @@
 
 <v.mk
 src = gawk-$v
-url = http://ftp.gnu.org/gnu/gawk/gawk-$v.tar.gz
+url = http://ftpmirror.gnu.org/gnu/gawk/gawk-$v.tar.gz
 mkfile = ../gawk.mk

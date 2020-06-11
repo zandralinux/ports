@@ -2,5 +2,5 @@
 
 <v.mk
 src = binutils-$v
-url = http://ftp.gnu.org/gnu/binutils/binutils-$v.tar.gz
+url = http://ftpmirror.gnu.org/gnu/binutils/binutils-$v.tar.gz
 mkfile = ../binutils.mk

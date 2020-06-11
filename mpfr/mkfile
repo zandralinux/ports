@@ -2,5 +2,5 @@
 
 <v.mk
 src = mpfr-$v
-url = ftp://ftp.gnu.org/gnu/mpfr/mpfr-$v.tar.xz
+url = http://ftpmirror.gnu.org/gnu/mpfr/mpfr-$v.tar.xz
 mkfile = ../mpfr.mk

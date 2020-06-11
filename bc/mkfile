@@ -2,5 +2,5 @@
 
 <v.mk
 src = bc-$v
-url = http://ftp.gnu.org/gnu/bc/bc-$v.tar.gz
+url = http://ftpmirror.gnu.org/gnu/bc/bc-$v.tar.gz
 mkfile = ../bc.mk
