@@ -4,6 +4,7 @@ TARG = ubase
 
 ubase:QV:
 	cp ../config.mk config.mk
+	sed -i '/\sdd/d;/\smknod/d' Makefile
 	make -j$nprocs DESTDIR="$ROOT"
 
 install:QV:
