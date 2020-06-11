@@ -6,7 +6,8 @@ DEPS = gmp mpfr mpc
 gcc:QV:
 	CC="${CC} -static" ./configure \
 		--prefix="$PREFIX" \
-		--mandir="$ROOT/share/man" \
+		--mandir="$PREFIX/share/man" \
+		--libexecdir="$PREFIX/lib" \
 		--disable-shared \
 		--disable-multilib \
 		--disable-nls \
