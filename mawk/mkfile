@@ -1,0 +1,6 @@
+<$mkbuild/mk.3rdparty
+
+<v.mk
+src = mawk-$v
+url = https://invisible-island.net/datafiles/release/mawk.tar.gz
+mkfile = ../mawk.mk
