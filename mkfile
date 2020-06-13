@@ -25,3 +25,10 @@ cleanall:QV:
 
 clearcache:QV:
 	rm */.cache-*.mk
+
+installpkgs:QV:
+	for pkg in $TARG; do
+		cd $pkg
+		installpkg -r $ROOT *.pkg.tgz
+		cd ..
+	done
