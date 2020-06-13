@@ -18,5 +18,10 @@ TARG = \
 
 <$mkbuild/mk.parent
 
+cleanall:QV:
+	for d in *; do
+		[ -d $d ] && (cd $d; mk clean; cd ..)
+	done
+
 clearcache:QV:
 	rm */.cache-*.mk
