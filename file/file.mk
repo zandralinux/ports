@@ -76,7 +76,7 @@ LOCAL_CFLAGS = \
 	-DHAVE_WORKING_VFORK=1 \
 	-DHAVE_ZLIB_H=1 \
 	-DPACKAGE="file" \
-	-DPACKAGE_BUGREPORT="christos@astron.com" \
+	-DPACKAGE_BUGREPORT="ben@benoneill.xyz" \
 	-DPACKAGE_NAME="file" \
 	-DPACKAGE_TARNAME="file" \
 	-DPACKAGE_URL="" \
@@ -88,7 +88,8 @@ LOCAL_CFLAGS = \
 	-D_TANDEM_SOURCE=1 \
 	-D__EXTENSIONS__=1 \
 	-DVERSION=\"$v\" \
-	-DMAGIC=\"$MAGIC\"
+	-DMAGIC=\"$MAGIC\" \
+	-D_INTPTR_T_DEFINED=1
 
 <$mkbuild/mk.common
 
