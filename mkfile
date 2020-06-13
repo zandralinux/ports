@@ -17,3 +17,6 @@ TARG = \
 	ubase
 
 <$mkbuild/mk.parent
+
+clearcache:QV:
+	rm */.cache-*.mk
