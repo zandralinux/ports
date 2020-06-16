@@ -1,9 +1,9 @@
 # deps: rsync
-TARG = linux-libre-headers
+TARG = linux-headers
 
 <$mkbuild/mk.common-noinst
 
-linux-libre-headers:QV:
+linux-headers:QV:
 	cp ../kernel-config-x86_64 .config
 
 install:QV:

@@ -1,6 +1,0 @@
-<$mkbuild/mk.3rdparty
-
-<v.mk
-src = linux-$v
-url = https://linux-libre.fsfla.org/pub/linux-libre/releases/$v-gnu/linux-libre-$v-gnu.tar.xz
-mkfile = ../linux-libre.mk
