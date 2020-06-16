@@ -18,15 +18,16 @@ TARG = \
 
 <$mkbuild/mk.parent
 
-cleanall:QV:
+cleanall:QV: clearcache
 	for d in *; do
-		[ -d $d ] && (cd $d; mk clean; cd ..)
+		[ -d $d ] && (cd $d; mk distclean; cd ..)
 	done
 
 clearcache:QV:
-	rm */.cache-*.mk
+	rm -f */.cache-*.mk
 
 installpkgs:QV:
+	mkdir -p $ROOT/var/pkg
 	for pkg in $TARG; do
 		cd $pkg
 		installpkg -r $ROOT *.pkg.tgz
