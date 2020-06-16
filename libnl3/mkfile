@@ -2,5 +2,5 @@
 
 <v.mk
 src = libnl-$v
-url = http://www.infradead.org/~tgr/libnl/files/libnl-$v.tar.gz
+url = https://github.com/thom311/libnl/releases/download/libnl3_5_0/libnl-$v.tar.gz
 mkfile = ../libnl3.mk
