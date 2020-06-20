@@ -3,11 +3,13 @@ INSTALL_BIN = busybox
 INSTALL_SYMLINK = \
 	busybox /bin/addgroup \
 	busybox /bin/adduser \
+	busybox /bin/awk \
 	busybox /bin/bunzip2 \
 	busybox /bin/bzcat \
 	busybox /bin/bzip2 \
 	busybox /bin/delgroup \
 	busybox /bin/deluser \
+	busybox /bin/diff \
 	busybox /bin/fdisk \
 	busybox /bin/fuser \
 	busybox /bin/gunzip \
@@ -18,9 +20,12 @@ INSTALL_SYMLINK = \
 	busybox /bin/killall \
 	busybox /bin/losetup \
 	busybox /bin/nc \
+	busybox /bin/patch \
 	busybox /bin/ping \
 	busybox /bin/reset \
 	busybox /bin/route \
+	busybox /bin/sed \
+	busybox /bin/tar \
 	busybox /bin/telnet \
 	busybox /bin/tftpd \
 	busybox /bin/top \
