@@ -1,5 +1,7 @@
 TARG = fakeroot
 INSTALL_BIN = fakeroot-ng
+INSTALL_SYMLINK = \
+		fakeroot-ng /bin/fakeroot
 
 <$mkbuild/mk.common
 
