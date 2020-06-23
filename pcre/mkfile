@@ -1,0 +1,6 @@
+<$mkbuild/mk.3rdparty
+
+<v.mk
+src = pcre-$v
+url = https://ftp.pcre.org/pub/pcre/pcre-$v.tar.gz
+mkfile = ../pcre.mk
