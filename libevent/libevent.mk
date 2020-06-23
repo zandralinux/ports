@@ -1,6 +1,6 @@
 TARG = libevent
 
-<$mkbuild/mk.common
+<$mkbuild/mk.common-noinst
 
 libevent:QV:
 	CC="$CC" ./configure \
@@ -12,3 +12,6 @@ libevent:QV:
 		--disable-libevent-regress \
 		--enable-static
 	make -j$nprocs
+
+install:QV:
+	make -j$nprocs install DESTDIR="$ROOT"

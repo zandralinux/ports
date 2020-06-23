@@ -1,6 +1,6 @@
 TARG = libnl3
 
-<$mkbuild/mk.common
+<$mkbuild/mk.common-noinst
 
 libnl3:QV:
 	./configure \
@@ -9,3 +9,6 @@ libnl3:QV:
 		--disable-shared \
 		--enable-static
 	make -j$nprocs
+
+install:QV:
+	make -j$nprocs install DESTDIR="$ROOT"

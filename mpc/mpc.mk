@@ -1,7 +1,7 @@
 TARG = mpc
 DEPS = gmp mpfr
 
-<$mkbuild/mk.common
+<$mkbuild/mk.common-noinst
 
 mpc:QV:
 	CC="$CC" ./configure \
@@ -15,3 +15,6 @@ mpc:QV:
 		--with-mpfr-lib=$mpfr_libdir
 	make -j$nprocs
 	make DESTDIR=`pwd`/lib install
+
+install:QV:
+	make -j$nprocs install DESTDIR="$ROOT"

@@ -1,6 +1,6 @@
 TARG = gmp
 
-<$mkbuild/mk.common
+<$mkbuild/mk.common-noinst
 
 gmp:QV:
 	CC="$CC" ./configure \
@@ -10,3 +10,6 @@ gmp:QV:
 		--enable-static
 	make -j$nprocs
 	rm -f .libs/libgmp.la .libs/libgmp.lai
+
+install:QV:
+	make -j$nprocs install DESTDIR="$ROOT"

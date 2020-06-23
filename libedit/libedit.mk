@@ -28,3 +28,6 @@ libedit:QV:
 	touch "`pwd`/lib/include/readline/history.h"
 	touch "`pwd`/lib/include/readline/tilde.h"
 	cp src/editline/readline.h "`pwd`/lib/include/readline/readline.h"
+
+install:QV:
+	make -j$nprocs install DESTDIR="$ROOT"

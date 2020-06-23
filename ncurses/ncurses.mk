@@ -1,10 +1,6 @@
 TARG = libncurses
-INSTALL_BIN = progs/tic progs/tput progs/tset progs/infocmp progs/toe progs/tabs
-INSTALL_MAN1 = man/tic.1m man/tput.1 man/tset.1 man/infocmp.1m man/toe.1m man/tabs.1
-INSTALL_MAN5 = man/terminfo.5
-INSTALL_EXTRA = install_terminfo
 
-<$mkbuild/mk.common
+<$mkbuild/mk.common-noinst
 
 libncurses:QV:
 	CC="$CC -static" ./configure \
@@ -33,5 +29,5 @@ libncurses:QV:
 	done
 
 
-install_terminfo:QV:
-	make -j$nprocs DESTDIR="$ROOT" install.data
+install:QV:
+	make -j$nprocs install DESTDIR="$ROOT"

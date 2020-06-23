@@ -15,7 +15,7 @@ INSTALL_MAN3 = \
 INSTALL_MAN8 = \
 	`{ ls doc/*.8 }
 
-<$mkbuild/mk.common
+<$mkbuild/mk.common-noinst
 
 libcap:QV:
 	cp ../make.rules Make.Rules
@@ -36,3 +36,6 @@ libcap:QV:
 		LD="$LD"
 		AR="$AR" \
 		RANLIB="$RANLIB"
+
+install:QV:
+	make -j$nprocs install prefix="/" lib="/lib" DESTDIR="$ROOT"
