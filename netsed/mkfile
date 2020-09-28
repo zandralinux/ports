@@ -1,0 +1,5 @@
+<$mkbuild/mk.3rdparty
+
+src = netsed
+git = https://github.com/xlab/netsed
+mkfile = ../netsed.mk
