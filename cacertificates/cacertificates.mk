@@ -1,7 +1,7 @@
 TARG = cacertificates
 
-<$mkbuild/mk.common-noinst
 <v.mk
+<$mkbuild/mk.common-noinst
 
 cacertificates:QV:
 	wget http://curl.haxx.se/ca/cacert-$v.pem
