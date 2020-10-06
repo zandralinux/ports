@@ -1,5 +1,4 @@
 TARG = \
-	cacertificates \
 	fs \
 	busybox \
 	cacertificates \
