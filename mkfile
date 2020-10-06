@@ -1,4 +1,5 @@
 TARG = \
+	cacertificates \
 	fs \
 	busybox \
 	curl \
@@ -6,6 +7,7 @@ TARG = \
 	e2fsprogs \
 	extlinux \
 	file \
+	less \
 	linux \
 	mksh \
 	ns-tools \
