@@ -1,11 +1,14 @@
 TARG = \
+	cacertificates \
 	fs \
 	busybox \
+	cacertificates \
 	curl \
 	dropbear \
 	e2fsprogs \
 	extlinux \
 	file \
+	less \
 	linux \
 	mksh \
 	ns-tools \
