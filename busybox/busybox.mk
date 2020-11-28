@@ -19,12 +19,14 @@ INSTALL_SYMLINK = \
 	busybox /bin/kbd_mode \
 	busybox /bin/killall \
 	busybox /bin/losetup \
+	busybox /bin/man \
 	busybox /bin/nc \
 	busybox /bin/patch \
 	busybox /bin/ping \
 	busybox /bin/reset \
 	busybox /bin/route \
 	busybox /bin/sed \
+	busybox /bin/stty \
 	busybox /bin/tar \
 	busybox /bin/telnet \
 	busybox /bin/tftpd \
