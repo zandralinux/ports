@@ -11,6 +11,7 @@ INSTALL_SYMLINK = \
 	busybox /bin/deluser \
 	busybox /bin/diff \
 	busybox /bin/fdisk \
+	busybox /bin/find \
 	busybox /bin/fuser \
 	busybox /bin/gunzip \
 	busybox /bin/gzip \
