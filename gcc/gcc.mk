@@ -28,7 +28,7 @@ gcc:QV:
 		--with-mpc-lib=$mpc_libdir \
 		--with-mpfr-include=$mpfr_includedir \
 		--with-mpfr-lib=$mpfr_libdir
-	make -j$nprocs all-gcc all-target-libgcc
+	make -j$nprocs
 
 install:QV:
-	make DESTDIR="$ROOT" install-gcc install-target-libgcc
+	make DESTDIR="$ROOT" install
