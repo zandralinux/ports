@@ -1,4 +1,5 @@
 TARG = busybox
+BIN = busybox
 INSTALL_BIN = busybox
 INSTALL_SYMLINK = \
 	busybox /bin/addgroup \

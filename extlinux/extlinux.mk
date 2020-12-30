@@ -1,3 +1,4 @@
+TARG = ../extlinux
 BIN = ../extlinux
 OBJ = bootsect_bin.o ldlinux_bin.o ldlinuxc32_bin.o \
 	  libinstaller/syslxcom.o \
