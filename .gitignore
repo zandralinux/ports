@@ -2,4 +2,5 @@
 .targs.mk
 .cache
 .cache*.mk
+*.pkg.tgz
 *.tar.*
