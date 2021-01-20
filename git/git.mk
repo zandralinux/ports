@@ -1,4 +1,5 @@
 TARG = git
+INSTALL_BIN = git
 DEPS = curl libressl zlib
 
 <$mkbuild/mk.common-noinst

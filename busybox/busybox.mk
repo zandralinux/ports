@@ -1,4 +1,5 @@
 TARG = busybox
+BIN = busybox
 INSTALL_BIN = busybox
 INSTALL_SYMLINK = \
 	busybox /bin/addgroup \
@@ -11,6 +12,7 @@ INSTALL_SYMLINK = \
 	busybox /bin/deluser \
 	busybox /bin/diff \
 	busybox /bin/fdisk \
+	busybox /bin/find \
 	busybox /bin/fuser \
 	busybox /bin/gunzip \
 	busybox /bin/gzip \
@@ -19,12 +21,14 @@ INSTALL_SYMLINK = \
 	busybox /bin/kbd_mode \
 	busybox /bin/killall \
 	busybox /bin/losetup \
+	busybox /bin/man \
 	busybox /bin/nc \
 	busybox /bin/patch \
 	busybox /bin/ping \
 	busybox /bin/reset \
 	busybox /bin/route \
 	busybox /bin/sed \
+	busybox /bin/stty \
 	busybox /bin/tar \
 	busybox /bin/telnet \
 	busybox /bin/tftpd \

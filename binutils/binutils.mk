@@ -1,8 +1,9 @@
-TARG = binutils
+INSTALL_BIN = binutils/addr2line binutils/ar binutils/cxxfilt binutils/elfedit binutils/nm-new binutils/objcopy binutils/objdump binutils/ranlib binutils/readelf binutils/size binutils/strings binutils/strip-new binutils/sysinfo gas/as-new ld/ld-new
+TARG = $INSTALL_BIN
 
 <$mkbuild/mk.common-noinst
 
-binutils:QV:
+$INSTALL_BIN:QV:
 	./configure \
 		--prefix="$PREFIX" \
 		--disable-multilib \
