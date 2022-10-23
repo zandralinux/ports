@@ -2,5 +2,5 @@
 
 <v.mk
 src = pcre-$v
-url = https://ftp.pcre.org/pub/pcre/pcre-$v.tar.gz
+url = https://versaweb.dl.sourceforge.net/project/pcre/pcre/$v/pcre-$v.tar.gz
 mkfile = ../pcre.mk
