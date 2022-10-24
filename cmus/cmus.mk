@@ -6,7 +6,6 @@ DEPS = ncurses
 cmus:QV:
 	export CFLAGS="$CFLAGS $DEPS_CFLAGS"
 	export LDFLAGS="$LDFLAGS $DEPS_LDFLAGS"
-	#
 	./configure \
 		CROSS="${HOST_TOOLCHAIN_TRIPLET}-" \
 		HOSTCC=${HOST_TOOLCHAIN_TRIPLET}-gcc \
@@ -46,5 +45,5 @@ cmus:QV:
 		USE_FALLBACK_IP=n
 	make -j$nprocs
 
-install:QV:
+install:QV: cmus
 	make -j$nprocs install DESTDIR="$ROOT"
