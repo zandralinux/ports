@@ -17,5 +17,5 @@ attr:QV:
 	# remove .la files for now ?
 	find `pwd`/lib -iname "*.la" -exec rm {} \;
 
-install:QV:
+install:QV: attr
 	make -j$nprocs install DESTDIR="$ROOT"
