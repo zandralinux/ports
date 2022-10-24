@@ -9,7 +9,6 @@ $INSTALL_BIN:QV:
 		--disable-multilib \
 		--disable-nls \
 		--disable-gold \
-		--disable-werror \
 		--build=${TOOLCHAIN_TRIPLET} \
 		--target=${TOOLCHAIN_TRIPLET}
 	make -j$nprocs
