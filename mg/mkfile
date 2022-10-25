@@ -1,0 +1,6 @@
+<$mkbuild/mk.3rdparty
+<v.mk
+
+src = mg-$v
+url = https://github.com/troglobit/mg/releases/download/v3.5/mg-$v.tar.gz
+mkfile = ../mg.mk
