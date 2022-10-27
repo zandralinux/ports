@@ -1,6 +1,6 @@
 <$mkbuild/mk.3rdparty
-<v.mk
 
+<v.mk
 src = teal-0.1
 url = https://github.com/boneill02/teal/releases/download/0.1/teal-0.1.tar.gz
 mkfile = ../teal.mk
