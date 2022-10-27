@@ -1,0 +1,6 @@
+<$mkbuild/mk.3rdparty
+
+<v.mk
+src = tbs-$v
+url = https://github.com/boneill02/tbs/releases/download/$v/tbs-$v.tar.gz
+mkfile = ../tbs.mk
