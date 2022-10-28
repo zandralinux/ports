@@ -3,5 +3,5 @@
 <v.mk
 
 src = pkgtools
-git = git://git.zandra.xyz/pkgtools
+url = https://github.com/zandralinux/pkgtools/releases/download/$v/pkgtools-$v.tar.gz
 mkfile = ../pkgtools.mk
